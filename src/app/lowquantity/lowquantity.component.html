@@ -1,0 +1,18 @@
+<app-menu></app-menu>
+<div class="col-md-12">
+  <div class="row">
+    <div *ngFor="let item of pro_arr,let i=index" class="col-sm-6 col-md-3">
+      <button type="button" class="list-group-item">
+        <div class="thumbnail">
+          <img src="{{item.p_img}}" alt="...">
+          <div class="caption">
+
+            <h4>P_id : {{item.p_id}}</h4>
+            <h4>{{item.p_name}}</h4>
+            <h4>Qty : {{item.p_qty}}</h4>
+          </div>
+        </div>
+      </button>
+    </div>
+  </div>
+</div>

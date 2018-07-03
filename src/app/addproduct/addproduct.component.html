@@ -1,0 +1,54 @@
+<app-menu></app-menu>
+<div class="container">
+
+  <h1>ADD PRODUCT</h1>
+     <hr>
+    <div class="form-group">
+        <h4>Name:</h4> <input class="form-control" type="text" [(ngModel)]="p_name">
+    </div>
+    
+    <div class="form-group">
+        <h4>Price:</h4> <input class="form-control" type="number" [(ngModel)]="p_price">
+    </div>
+    
+    <div class="form-group">
+        <h4>Quantity:</h4> <input class="form-control" type="number" [(ngModel)]="p_qty">
+    </div>
+    
+    <div class="form-group">
+        <h4>Manufacturer:</h4> <input class="form-control" type="text" [(ngModel)]="p_mfg">
+    </div>
+    
+    <div class="form-group">
+      <h4>Image:</h4> <input class="form-control" type="text" [(ngModel)]="p_img">
+  </div>
+  
+  <div class="form-group">
+      <h4>Color:</h4> <input class="form-control" type="text" [(ngModel)]="p_color">
+  </div>
+  
+  <div class="form-group">
+      <h4>Cat_id:</h4> 
+      <select class="form-control" [(ngModel)]="fk_cat_id">
+        <option *ngFor="let item of cat_arr">{{item.cat_id}}</option>
+      </select>
+  </div>
+  
+  <div class="form-group">
+      <h4>Discription:</h4> <input class="form-control" type="text" [(ngModel)]="p_desc">
+  </div>
+  
+  
+    <div class="row">
+        <div class="col-md-6">
+                <button class="btn btn-lg btn-primary form-control" (click)="onclickadd()" >ADD</button>
+        </div>
+        <div class="col-md-6">
+                <button class="btn btn-lg btn-danger form-control" (click)="onclickcancel()" >CANCEL</button>
+        </div>        
+        
+        
+    </div>
+    
+  </div>
+  

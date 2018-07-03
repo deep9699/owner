@@ -1,0 +1,25 @@
+<app-menu></app-menu>
+<div class="col-md-12">
+    <div class="row">
+      <div *ngFor="let item of pro_arr,let i=index" class="col-sm-6 col-md-3" >
+        
+        <div class="thumbnail">
+          <img src="{{item.p_img}}" alt="..." >
+          <div class="caption">
+          
+            <h4>{{item.p_name}}</h4>
+            <h4>Order_Id : {{o_arr[i].id}}</h4>
+            <h4>Amount : {{o_arr[i].amount}}</h4>
+            <h4>Qty : {{o_arr[i].amount/item.p_price}}</h4>
+            <h4>Status : {{status_arr[i]}}</h4>
+            <h4>Date : {{o_arr[i].date}}</h4>
+          
+            <button type="button" class="btn btn-primary btn-md" (click)="onclickdone(o_arr[i])">
+                DONE
+              </button>
+          </div>
+        </div>
+      
+      </div>
+    </div>
+  </div>

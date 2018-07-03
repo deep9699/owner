@@ -1,0 +1,35 @@
+<app-menu></app-menu>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <ul class="list-group">
+            <li  class="list-group-item" *ngFor="let item of cat_arr">
+                <button type="button" class="list-group-item" (click)="onclickcat(item.cat_name)">{{item.cat_name}}</button>
+              </li>
+           
+        </ul>
+      </div>
+      <div class="col-md-8">
+        <div class="row">
+          <div *ngFor="let item of cat_pro_arr" class="col-sm-6 col-md-4" >
+            <button type="button" class="list-group-item" (click)="onlclickpro(item.p_id)">
+            <div class="thumbnail">
+              <img src="{{item.p_img}}" alt="..." >
+              <div class="caption">
+              
+                <h4>{{item.p_name}}</h4>
+                
+              </div>
+            </div>
+          </button>
+          </div>
+        </div>
+      </div>
+    <!-- </div>
+    <div class="row">
+      <nav class="navbar navbar-inverse">
+        
+      </nav>
+    </div> -->
+  </div>
+  
